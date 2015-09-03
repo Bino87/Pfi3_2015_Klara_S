@@ -40,10 +40,10 @@ public class LoginFragment extends Fragment implements ValueEventListener
             @Override
             public void onClick(View v) {
                 //In firebase you read a value by adding a listener, then it will trigger once connected and on all changes.
-                //There is no readvalue as one could expect only listeners.
+                //There is no readvalue methods as one naively could expect only listeners.
                 //Get the ScreenNbr child
                 Firebase  fireBaseEntryForScreenNbr = Constants.myFirebaseRef.child("ScreenNbr");
-                //Ok listen the changes will sho up in the method onDataChange
+                //Ok listen the changes will show up in the method onDataChange
                 fireBaseEntryForScreenNbr.addValueEventListener(LoginFragment.this);
             }
         });
